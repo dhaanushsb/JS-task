@@ -1,0 +1,20 @@
+div {
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    padding:  40px;
+    
+    align-items: center;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+    margin-top: 200px;
+    color: red;
+}
+h3{
+    text-align: center;
+    color: blue;
+}

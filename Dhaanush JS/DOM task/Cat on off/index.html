@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Image Model</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <div class="bulb-container">
+        <img id="bulbOnImage" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png" alt="Bulb On Image">
+        <img id="bulbOffImage" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" alt="Bulb Off Image">
+      </div>
+      <div class="cat-container">
+        <img id="catImage" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png" alt="Cat Image">
+        <img id="catEyesImage" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" alt="Cat Eyes Image">
+      </div>
+    </div>
+    <div class="toggle-switch">
+      <button id="onButton" onclick="toggleImages(true)">ON</button>
+      <button id="offButton" onclick="toggleImages(false)">OFF</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
