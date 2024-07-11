@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form name="calc">
+                <input type="text" name="display" class="display" readonly>
+            </form>
+            <div class="buttons">
+                <input type="button" class="clr" value="CLR" onclick="clearDisplay()">
+                <input type="button" class="clr" value="DEL" onclick="deleteLast()">
+                <input type="button" class="eql" value="%" onclick="appendToDisplay('%')">
+                <input type="button" class="eql" value="/" onclick="appendToDisplay('/')">
+                <input type="button" value="7" onclick="appendToDisplay('7')">
+                <input type="button" value="8" onclick="appendToDisplay('8')">
+                <input type="button" value="9" onclick="appendToDisplay('9')">
+                <input type="button" class="eql" value="x" onclick="appendToDisplay('*')">
+                <input type="button" value="4" onclick="appendToDisplay('4')">
+                <input type="button" value="5" onclick="appendToDisplay('5')">
+                <input type="button" value="6" onclick="appendToDisplay('6')">
+                <input type="button" class="eql" value="-" onclick="appendToDisplay('-')">
+                <input type="button" value="1" onclick="appendToDisplay('1')">
+                <input type="button" value="2" onclick="appendToDisplay('2')">
+                <input type="button" value="3" onclick="appendToDisplay('3')">
+                <input type="button" class="eql" value="+" onclick="appendToDisplay('+')">
+                <input type="button" value="00" onclick="appendToDisplay('00')">
+                <input type="button" value="0" onclick="appendToDisplay('0')">
+                <input type="button" value="." onclick="appendToDisplay('.')">
+                <input type="button" class="eql" value="=" onclick="calculateResult()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clearDisplay() {
+            document.calc.display.value = "";
+        }
+
+        function deleteLast() {
+            document.calc.display.value = document.calc.display.value.slice(0, -1);
+        }
+
+        function appendToDisplay(value) {
+            document.calc.display.value += value;
+        }
+
+        function calculateResult() {
+            try {
+                document.calc.display.value = eval(document.calc.display.value.replace(/x/g, '*'));
+            } catch (e) {
+                document.calc.display.value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
