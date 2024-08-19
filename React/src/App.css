@@ -1,0 +1,42 @@
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* Unordered list inside the nav */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* List items in the nav */
+nav ul li {
+  margin: 0 1rem;
+}
+
+/* Links in the nav */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Content area below the nav */
+.content {
+  padding-top: 80px; /* Ensures content doesn't hide behind the fixed navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+}
